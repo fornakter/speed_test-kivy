@@ -1,0 +1,17 @@
+MainWidget:
+
+<MainWidget>:
+    orientation: 'vertical'
+    Label:
+        text: "Speed test"
+    Button:
+        text: "Start"
+        on_press:
+            root.on_button_click()
+    Label:
+        text: root.status_label
+    BoxLayout:
+        Label:
+            text: "Download:"
+        Label:
+            text: "Upload:"
