@@ -4,14 +4,30 @@ MainWidget:
     orientation: 'vertical'
     Label:
         text: "Speed test"
-    Button:
-        text: "Start"
-        on_press:
-            root.on_button_click()
+
+
     Label:
+        #id: status_label
         text: root.status_label
+    Label:
+        text: root.server_label
+    Label:
     BoxLayout:
         Label:
-            text: "Download:"
+        Button:
+            text: "Start"
+            on_press:
+                root.on_press()
+                root.on_release()
+            on_release:
+                root.download_test()
+                root.upload_test()
         Label:
-            text: "Upload:"
+
+    BoxLayout:
+        Label:
+            text: root.download_label
+        Label:
+            text: root.upload_label
+    Label:
+
